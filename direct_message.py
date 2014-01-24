@@ -33,7 +33,9 @@ if direct_measage:
         
         if direct_measage[0].text == 'snapshot' or direct_measage[0].text == 'Snapshot':
             
-            tweet()
+            os.system("raspistill -o image.jpg -w 640 -h 480 -q 50")
+            photo = open('image.jpg','rb')
+            api.UpdateWithMedia(media=photo, status='Snapshot')
             api.DestroyDirectMessage(id)
             print 'Picture Tweetet - Message deleted...'
             
