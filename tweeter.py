@@ -21,7 +21,8 @@ def tweet(filename):
     photo = open('filename','rb')
     api.update_status_with_media(media=photo, status='RaspberryPi Opdaterer:')
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     # test1.py executed as script
     # do something
     #tweet()
+    
